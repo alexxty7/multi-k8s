@@ -1,0 +1,1 @@
+# Multicontainer kubernetis demo.
