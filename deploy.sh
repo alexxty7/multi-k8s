@@ -11,7 +11,7 @@ docker push alexkatulskiy/multi-server:$SHA
 docker push alexkatulskiy/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment client=alexkatulskiy/multi-client:$SHA
+kubectl set image deployments/client-deployment client=alexkatulskiy/multi-client:$SHA
 kubectl set image deployments/server-deployment server=alexkatulskiy/multi-server:$SHA
-kubectl set image deployments/server-deployment worker=alexkatulskiy/multi-worker:$SHA
+kubectl set image deployments/worker-deployment worker=alexkatulskiy/multi-worker:$SHA
 
